@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Mariage d'Inès &amp; Moustafa, samedi 21 novembre 2026 à Montrouge. Site disponible en français, en anglais (English) et en arabe (العربية).">
+<title>Inès & Moustafa – Notre mariage</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf8f4;--card:#fff;--ink:#2b2622;--muted:#7a6f66;--accent:#a8674a;--accent-ink:#fff;--soft:#f1e8df;--line:#e6dbd0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1714;--card:#25201c;--ink:#f1e9e1;--muted:#b3a698;--accent:#d69672;--accent-ink:#1b1714;--soft:#2e2721;--line:#3a322b}}
+:root[data-theme="dark"]{--bg:#1b1714;--card:#25201c;--ink:#f1e9e1;--muted:#b3a698;--accent:#d69672;--accent-ink:#1b1714;--soft:#2e2721;--line:#3a322b}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Jost',system-ui,sans-serif;font-weight:300;line-height:1.6}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;margin:0}
+section{max-width:760px;margin:0 auto;padding:64px 22px}
+.eyebrow{letter-spacing:.25em;text-transform:uppercase;font-size:.78rem;color:var(--accent);font-weight:400}
+h2{font-size:2.2rem;margin:.3rem 0 1.4rem}
+.hero{text-align:center;padding:96px 22px 72px;background:var(--soft)}
+.hero h1{font-size:clamp(3rem,13vw,5.6rem);line-height:1;margin:.6rem 0}
+.hero h1 span{font-style:italic;color:var(--accent);font-size:.6em;display:block;margin:.1em 0}
+.hero p{color:var(--muted);font-size:1.15rem;margin:.3rem 0}
+.count{display:flex;justify-content:center;gap:12px;margin:34px 0 30px;flex-wrap:wrap}
+.count div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 6px;min-width:74px}
+.count b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;font-weight:600;line-height:1.1}
+.count small{color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);border:0;border-radius:999px;padding:13px 28px;font:400 1rem 'Jost',system-ui,sans-serif;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.card h3{font-size:1.4rem;color:var(--accent)}
+.card .t{font-size:.85rem;color:var(--muted);margin-bottom:6px}
+.card p{margin:.3rem 0 0}
+.info p{margin:.6rem 0}
+label{display:block;font-size:.85rem;color:var(--muted);margin:14px 0 5px}
+input,select,textarea{width:100%;font:300 1rem 'Jost',system-ui,sans-serif;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.chip{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:9px 18px;font:400 .95rem 'Jost',system-ui,sans-serif;cursor:pointer}
+.chip.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.bar{height:12px;border-radius:99px;background:var(--soft);overflow:hidden;margin:14px 0 6px}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:99px;width:0;transition:width 1s}
+.stats{display:flex;justify-content:space-between;color:var(--muted);font-size:.9rem}
+.stats b{color:var(--ink);font-weight:500}
+.iban{display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:var(--soft);border-radius:12px;padding:12px 14px;margin-top:10px;font-size:.92rem;word-break:break-all}
+.iban .btn{padding:7px 16px;font-size:.85rem}
+.note{color:var(--muted);font-size:.85rem;margin-top:12px}
+.lang{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:14px;z-index:5;display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
+.lang button{border:0;background:transparent;color:var(--muted);font:400 .85rem 'Jost',system-ui,sans-serif;padding:7px 13px;cursor:pointer;letter-spacing:.08em}
+.lang button.on{background:var(--accent);color:var(--accent-ink)}
+.langnote{margin-top:22px;font-size:.9rem;color:var(--muted)}
+.langnote a{color:var(--accent);text-decoration:underline;cursor:pointer}
+#status{min-height:1.4em}
+.lang{direction:ltr}
+html[lang="ar"] :is(body,h2,h3,button,input,select,textarea,.card,.btn){font-family:'Cairo','Jost',system-ui,sans-serif}
+html[lang="ar"] :is(.eyebrow,.count small){letter-spacing:0;text-transform:none}
+html[lang="ar"] .count{direction:ltr}
+footer{text-align:center;color:var(--muted);padding:40px 22px 60px;font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="lang" role="group" aria-label="Language"><button data-l="fr">FR</button><button data-l="en">EN</button><button data-l="ar">AR</button></div>
+
+<header class="hero">
+  <div class="eyebrow" data-i="eyebrow"></div>
+  <h1>Inès <span>&amp;</span> Moustafa</h1>
+  <p data-i="date"></p>
+  <p data-i="place"></p>
+  <div class="count" id="count"></div>
+  <a class="btn" href="#rsvp" data-i="btnRsvp"></a>
+  <a class="btn ghost" href="#cagnotte" style="margin-inline-start:6px" data-i="btnGift"></a>
+  <p class="langnote" data-i="langNote"></p>
+</header>
+
+<section id="programme">
+  <div class="eyebrow" data-i="progEy"></div>
+  <h2 data-i="progH"></h2>
+  <div class="grid">
+    <div class="card"><div class="t" data-i="t1"></div><h3 data-i="h1"></h3><p data-i="p1"></p></div>
+    <div class="card"><div class="t" data-i="t2"></div><h3 data-i="h2"></h3><p data-i="p2"></p></div>
+  </div>
+</section>
+
+<section id="infos" class="info">
+  <div class="eyebrow" data-i="infoEy"></div>
+  <h2 data-i="infoH"></h2>
+  <p data-i="i1"></p>
+  <p data-i="i2"></p>
+  <p data-i="i3"></p>
+  <p data-i="i4"></p>
+</section>
+
+<section id="rsvp">
+  <div class="eyebrow" data-i="rsvpEy"></div>
+  <h2 data-i="rsvpH"></h2>
+  <div class="card">
+    <label for="nom" data-i="lName"></label><input id="nom" autocomplete="name">
+    <label for="pres" data-i="lPres"></label>
+    <select id="pres"><option data-i="oYes"></option><option data-i="oNo"></option></select>
+    <label for="nb" data-i="lNb"></label><input id="nb" type="number" min="1" max="10" value="1">
+    <label for="regime" data-i="lDiet"></label><input id="regime">
+    <p style="margin:20px 0 0"><button class="btn" id="send" data-i="bSend"></button></p>
+    <p class="note" data-i="nSend"></p>
+    <p class="note" id="status" role="status"></p>
+  </div>
+</section>
+
+<section id="cagnotte">
+  <h2 data-i="gH"></h2>
+  <p data-i="gP"></p>
+  <div class="card" style="margin-top:22px;text-align:center">
+    <p style="margin-top:0" data-i="gSafe"></p>
+    <a class="btn" id="give" href="https://www.onparticipe.fr/c/IxBNkYpi/participe" target="_blank" rel="noopener" data-i="gBtn"></a>
+    <p class="note" data-i="gNote"></p>
+  </div>
+</section>
+
+<footer data-i="foot"></footer>
+
+<script>
+var CONFIG = { date: "2026-11-21T15:30:00", email: "wedding@ines-moustafa.fr" };
+/* Envoi direct des réponses vers la boîte mail via FormSubmit (aucun compte requis ; 1er envoi = activation par e-mail) */
+var FORM_ENDPOINT = "https://formsubmit.co/ajax/" + CONFIG.email;
+
+var T = {
+ fr:{eyebrow:"Nous nous marions",date:"Samedi 21 novembre 2026",place:"Montrouge · Hauts-de-Seine",btnRsvp:"Confirmer ma présence",btnGift:"Nos cadeaux de mariage",
+  langNote:'Ce site est aussi disponible en <a data-l="en">English</a> et en <a data-l="ar">العربية</a>.',
+  progEy:"Le grand jour",progH:"Programme",t1:"15h30 – 16h30",h1:"Mairie de Montrouge",p1:"Cérémonie civile.",t2:"16h30 – 19h00",h2:"Cocktail dînatoire",p2:"Au Beffroi de Montrouge.",
+  infoEy:"Bon à savoir",infoH:"Infos pratiques",
+  i1:"<b>Lieux.</b> Mairie de Montrouge, puis Beffroi de Montrouge (92120 Montrouge). Les deux sont proches l'un de l'autre.",
+  i2:"<b>Accès.</b> Métro ligne 4, terminus Mairie de Montrouge. Plusieurs hôtels se trouvent à proximité, à Montrouge et à Paris.",
+  i3:"<b>Tenue.</b> Élégante, avec de quoi vous couvrir : nous serons en automne.",
+  i4:"<b>Réponse souhaitée avant le 1<sup>er</sup> novembre 2026.</b>",
+  rsvpEy:"Réponse",rsvpH:"Serez-vous des nôtres ?",lName:"Nom et prénom",lPres:"Présence",oYes:"Avec grand plaisir !",oNo:"Malheureusement, nous ne pourrons pas venir",
+  lNb:"Nombre de personnes",lDiet:"Allergies / régime alimentaire (facultatif)",bSend:"Envoyer ma réponse",nSend:"Votre réponse nous est envoyée directement.",
+  sending:"Envoi en cours…",sentOk:"Merci ! Votre réponse nous a bien été envoyée.",sentErr:"L'envoi automatique a échoué : votre messagerie va s'ouvrir avec la réponse déjà rédigée.",needName:"Merci d'indiquer votre nom.",
+  gH:"Pour le début de notre histoire à deux",
+  gP:"Cette cagnotte remplace la liste traditionnelle et nous donne ainsi plus de choix et de flexibilité dans nos cadeaux de mariage. Mais rassurez-vous, nous avons déjà quelques idées pour dépenser cette cagnotte. Ici vous pouvez directement et en un clic, participer au financement de nos cadeaux de mariage. Chacun participe du montant qu'il souhaite.",
+  gSafe:"Participation libre, paiement 100&nbsp;% sécurisé sur OnParticipe.",gBtn:"Participer",gNote:"Vous pourrez y laisser un petit message pour les mariés.",
+  foot:"Avec tout notre amour, Inès &amp; Moustafa",units:["jours","heures","min","sec"],title:"Inès & Moustafa – Notre mariage",mSub:"RSVP mariage"},
+ en:{eyebrow:"We're getting married",date:"Saturday 21 November 2026",place:"Montrouge · near Paris, France",btnRsvp:"RSVP",btnGift:"Our wedding gifts",
+  langNote:'This website is also available in <a data-l="fr">Français</a> and <a data-l="ar">العربية</a>.',
+  progEy:"The big day",progH:"Schedule",t1:"3:30 pm – 4:30 pm",h1:"Montrouge Town Hall",p1:"Civil ceremony.",t2:"4:30 pm – 7:00 pm",h2:"Cocktail dinner",p2:"At the Beffroi de Montrouge.",
+  infoEy:"Good to know",infoH:"Practical information",
+  i1:"<b>Venues.</b> Montrouge Town Hall (Mairie de Montrouge), then the Beffroi de Montrouge (92120 Montrouge). The two are close to each other.",
+  i2:"<b>Getting there.</b> Paris Metro line 4 to its terminus, Mairie de Montrouge. Several hotels are nearby, in Montrouge and in Paris.",
+  i3:"<b>Dress code.</b> Elegant, and bring something warm: it will be autumn.",
+  i4:"<b>Please reply by 1 November 2026.</b>",
+  rsvpEy:"RSVP",rsvpH:"Will you join us?",lName:"Full name",lPres:"Attendance",oYes:"Gladly, we'll be there!",oNo:"Sadly, we can't make it",
+  lNb:"Number of guests",lDiet:"Allergies / dietary needs (optional)",bSend:"Send my reply",nSend:"Your reply is sent to us directly.",
+  sending:"Sending…",sentOk:"Thank you! Your reply has been sent.",sentErr:"Automatic sending failed: your email app will open with the reply already written.",needName:"Please enter your name.",
+  gH:"For the start of our life together",
+  gP:"This fund replaces the traditional gift registry and gives us more choice and flexibility with our wedding gifts. Don't worry, we already have a few ideas for how to spend it. Here you can contribute to our wedding gifts directly in one click. Everyone gives the amount they wish.",
+  gSafe:"Give any amount you like, with secure payment on OnParticipe (the page is in French).",gBtn:"Contribute",gNote:"You'll be able to leave a little message for the couple.",
+  foot:"With all our love, Inès &amp; Moustafa",units:["days","hours","min","sec"],title:"Inès & Moustafa – Our wedding",mSub:"Wedding RSVP"},
+ ar:{eyebrow:"نتزوّج",date:"السبت 21 نوفمبر 2026",place:"مونتروج · قرب باريس، فرنسا",btnRsvp:"تأكيد الحضور",btnGift:"هدايا الزفاف",
+  langNote:'هذا الموقع متوفر أيضًا بـ <a data-l="fr">Français</a> و<a data-l="en">English</a>.',
+  progEy:"يوم الزفاف",progH:"برنامج اليوم",t1:"15:30 – 16:30",h1:"بلدية مونتروج",p1:"عقد القران المدني.",t2:"16:30 – 19:00",h2:"حفل كوكتيل عشائي",p2:"في Beffroi de Montrouge.",
+  infoEy:"معلومات مفيدة",infoH:"معلومات عملية",
+  i1:"<b>الأماكن.</b> بلدية مونتروج (Mairie de Montrouge)، ثم Beffroi de Montrouge (92120 مونتروج). المكانان قريبان من بعضهما.",
+  i2:"<b>الوصول.</b> مترو الخط 4 حتى المحطة الأخيرة Mairie de Montrouge. توجد عدة فنادق قريبة في مونتروج وباريس.",
+  i3:"<b>الملابس.</b> أنيقة، ومعها ما يدفئكم: سنكون في فصل الخريف.",
+  i4:"<b>نرجو الرد قبل 1 نوفمبر 2026.</b>",
+  rsvpEy:"تأكيد الحضور",rsvpH:"هل ستشاركوننا فرحتنا؟",lName:"الاسم الكامل",lPres:"الحضور",oYes:"بكل سرور، سنكون هناك!",oNo:"للأسف، لن نتمكن من الحضور",
+  lNb:"عدد الأشخاص",lDiet:"حساسية / نظام غذائي (اختياري)",bSend:"إرسال ردّي",nSend:"يصلنا ردّكم مباشرة.",
+  sending:"جارٍ الإرسال…",sentOk:"شكرًا لكم! تم إرسال ردّكم.",sentErr:"فشل الإرسال التلقائي: سيُفتح تطبيق البريد لديكم مع الرد جاهزًا.",needName:"يرجى كتابة الاسم.",
+  gH:"لبداية قصتنا معًا",
+  gP:"يحلّ هذا الصندوق محلّ قائمة الهدايا التقليدية، ويمنحنا خيارات ومرونة أكبر في هدايا زفافنا. لكن اطمئنّوا، لدينا بالفعل بعض الأفكار لكيفية استخدامه. يمكنكم هنا، بنقرة واحدة، المساهمة مباشرة في تمويل هدايا زفافنا. وكلٌّ يساهم بالمبلغ الذي يريده.",
+  gSafe:"ساهموا بالمبلغ الذي تشاؤون، والدفع آمن عبر OnParticipe (الصفحة بالفرنسية).",gBtn:"ساهِم",gNote:"ستتمكنون من ترك رسالة صغيرة للعروسين.",
+  foot:"بكل حبّنا، إينيس ومصطفى",units:["أيام","ساعات","دقائق","ثوانٍ"],title:"إينيس ومصطفى – زفافنا",mSub:"تأكيد حضور الزفاف"}
+};
+var $ = function(id){ return document.getElementById(id); };
+var lang = "fr";
+try { var sv = localStorage.getItem("lang"); if (sv==="fr"||sv==="en"||sv==="ar") lang = sv; } catch(e){}
+
+function apply(){
+  var d = T[lang];
+  [].forEach.call(document.querySelectorAll("[data-i]"), function(el){ el.innerHTML = d[el.dataset.i]; });
+  [].forEach.call(document.querySelectorAll(".lang button"), function(b){ b.className = b.dataset.l===lang ? "on" : ""; });
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang==="ar" ? "rtl" : "ltr";
+  document.title = d.title;
+  $("status").textContent = "";
+  tick();
+}
+document.addEventListener("click", function(e){
+  var b = e.target.closest("[data-l]"); if (!b) return;
+  e.preventDefault(); lang = b.dataset.l;
+  try { localStorage.setItem("lang", lang); } catch(x){}
+  apply();
+});
+
+function tick(){
+  var ms = Math.max(0, new Date(CONFIG.date) - new Date()), s = Math.floor(ms/1000), u = T[lang].units;
+  var v = [Math.floor(s/86400), Math.floor(s%86400/3600), Math.floor(s%3600/60), s%60];
+  $("count").innerHTML = v.map(function(x,i){ return "<div><b>"+x+"</b><small>"+u[i]+"</small></div>"; }).join("");
+}
+setInterval(tick, 1000);
+
+function mailtoFallback(p){
+  var body = "Nom / Name: "+p.name+"\nRéponse / Reply: "+p.attendance+"\nPersonnes / Guests: "+p.guests+"\nRégime / Diet: "+p.dietary;
+  location.href = "mailto:"+CONFIG.email+"?subject="+encodeURIComponent(T[lang].mSub+" – "+p.name)+"&body="+encodeURIComponent(body);
+}
+$("send").onclick = function(){
+  var d = T[lang], st = $("status"), btn = $("send");
+  var p = { name:$("nom").value.trim(), attendance:$("pres").value, guests:$("nb").value, dietary:$("regime").value.trim() };
+  if (!p.name) { st.textContent = d.needName; return; }
+  st.textContent = d.sending; btn.disabled = true;
+  fetch(FORM_ENDPOINT, { method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"},
+    body: JSON.stringify({ _subject:d.mSub+" – "+p.name, _template:"table", _captcha:"false", name:p.name, attendance:p.attendance, guests:p.guests, dietary:p.dietary, site_language:lang }) })
+  .then(function(r){ return r.json().then(function(j){ if (!r.ok || j.success===false || j.success==="false") throw new Error("fail"); }); })
+  .then(function(){ st.textContent = d.sentOk; btn.disabled = false; })
+  .catch(function(){ st.textContent = d.sentErr; btn.disabled = false; setTimeout(function(){ mailtoFallback(p); }, 1800); });
+};
+apply();
+</script>
+</body>
+</html>
