@@ -209,9 +209,11 @@ $("send").onclick = function(){
   st.textContent = d.sending; btn.disabled = true;
   fetch(FORM_ENDPOINT, { method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"},
     body: JSON.stringify({ _subject:d.mSub+" – "+p.name, _template:"table", _captcha:"false", name:p.name, attendance:p.attendance, guests:p.guests, dietary:p.dietary, site_language:lang }) })
-  .then(function(r){ return r.json().then(function(j){ if (!r.ok || j.success===false || j.success==="false") throw new Error("fail"); }); })
+  .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){
+      if (!r.ok || j.success===false || j.success==="false") throw new Error("HTTP "+r.status+(j.message ? " – "+j.message : ""));
+  }); })
   .then(function(){ st.textContent = d.sentOk; btn.disabled = false; })
-  .catch(function(){ st.textContent = d.sentErr; btn.disabled = false; setTimeout(function(){ mailtoFallback(p); }, 1800); });
+  .catch(function(err){ console.error(err); st.textContent = d.sentErr+" ["+(err && err.message ? err.message : err)+"]"; btn.disabled = false; setTimeout(function(){ mailtoFallback(p); }, 4000); });
 };
 apply();
 </script>
